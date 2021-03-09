@@ -55,6 +55,10 @@ public class HelloworldApplication {
         Object bean1 = run.getBean(DBHelper.class);
         System.out.println(bean1);
 
+
+        boolean haha = run.containsBean("haha");
+        System.out.println("haha:" + haha);
+
     }
 
 }
