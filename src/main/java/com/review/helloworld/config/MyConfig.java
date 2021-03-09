@@ -1,9 +1,11 @@
 package com.review.helloworld.config;
 
+import ch.qos.logback.core.db.DBHelper;
 import com.review.helloworld.pojo.Pet;
 import com.review.helloworld.pojo.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * 1.配置类里面使用@Bean标注在方法上给容器注册组件，默认也是单实例的
@@ -13,6 +15,9 @@ import org.springframework.context.annotation.Configuration;
  *      Lite(proxyBeanMethod = false) 【每个@Bean方法被调用多少次返回的组件都是新创建的】
  *      组件依赖必须使用FFull模式默认
  */
+
+
+@Import({User.class, DBHelper.class})
 @Configuration //告诉SpringBoot这是一个配置类 == 配置文件
 public class MyConfig {
 
