@@ -1,0 +1,22 @@
+person:
+  userName: jason
+  boss: true
+  birth: 2020/1/1
+  age: 1
+# interests: [足球,篮球]
+  interests:
+    - 篮球
+    - 足球
+  animal: [猫,狗]
+  score: {english:80,math:90}
+  salarys:
+    - 9999
+    - 8888
+  pet:
+    name:jjj
+  allPets:
+    sick:
+      - {name:jjj}
+    health:
+      - name:
+          jjj1

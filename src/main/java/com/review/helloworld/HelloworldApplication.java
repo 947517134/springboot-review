@@ -13,6 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 主程序类
+ *
  * @SpringBootApplication ： 这是一个springboot应用
  */
 @SpringBootApplication
@@ -24,14 +25,14 @@ public class HelloworldApplication {
 
         //2.查看IOC容器中的组件
         String[] names = run.getBeanDefinitionNames();
-        for (String name : names){
+        for (String name : names) {
             System.out.println(name);
         }
 
         //3.从容器中获取组件
         Pet tom1 = run.getBean("tom", Pet.class);
         Pet tom2 = run.getBean("tom", Pet.class);
-        System.out.println("获取的两个组件是否是同一个组件:"+ (tom1==tom2));
+        System.out.println("获取的两个组件是否是同一个组件:" + (tom1 == tom2));
 
         MyConfig bean = run.getBean(MyConfig.class);
         System.out.println(bean);
@@ -48,7 +49,7 @@ public class HelloworldApplication {
         //5。获取组件
         String[] beanNamesForType = run.getBeanNamesForType(User.class);
         System.out.println("==========");
-        for(String s : beanNamesForType){
+        for (String s : beanNamesForType) {
             System.out.println(s);
         }
 
