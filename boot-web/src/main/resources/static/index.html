@@ -6,5 +6,22 @@
 </head>
 <body>
     <h1>欢迎您</h1>
+
+    <form action="/user" method="post">
+        <input value="Rest-POST" type="submit">
+    </form>
+    <form action="/user" method="get">
+        <input value="Rest-GET" type="submit">
+    </form>
+    <form action="/user" method="post">
+<!--        <input name="_method" type="hidden" value="DELETE">-->
+        <input name="_m" type="hidden" value="DELETE">
+        <input value="Rest-DELETE" type="submit">
+    </form>
+    <form action="/user" method="post">
+<!--        <input name="_method" type="hidden" value="PUT">-->
+        <input name="_m" type="hidden" value="PUT">
+        <input value="Rest-PUT" type="submit">
+    </form>
 </body>
 </html>

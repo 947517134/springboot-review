@@ -3,3 +3,8 @@
 ##    static-path-pattern: /res/**
 #  resources:
 #    static-locations: [classpath:/res/]
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true #开启页面表单的Rest共能
