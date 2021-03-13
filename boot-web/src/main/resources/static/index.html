@@ -7,6 +7,8 @@
 <body>
     <h1>欢迎您</h1>
 
+    <a href="/car/2/owner/jason?age=18&inters=basketball&inters=game">/car/2/owner/jason?age=18&inters=basketball&inters=game</a>
+
     <form action="/user" method="post">
         <input value="Rest-POST" type="submit">
     </form>
@@ -23,5 +25,24 @@
         <input name="_m" type="hidden" value="PUT">
         <input value="Rest-PUT" type="submit">
     </form>
+    <h1>==================</h1>
+
+    <li>@PathVariable  （路径变量)</li>
+    <li>@RequestHeader（获取请求头）</li>
+    <li>@RequestParam  （获取请求参数）</li>
+    <li>@CookieValue （获取cookie值）</li>
+    <li>@RequestBody    （获取请求体[Post]）</li>
+
+    <li><a href="/goto">@RequestAttribute （获取request域属性）</a></li>
+    <li><a href="/cars/sell;low=44;brand=byd,audi,yadi"> @MatrixVariable （矩阵变量）</a></li>
+
+    <h1>==================</h1>
+
+<form action="/save" method="post">
+    测试@Requestbody获取数据<br/>
+    用户名：<input name="userName"/>
+    邮箱：<input name="email"/>
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
