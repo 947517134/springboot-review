@@ -48,13 +48,14 @@ public class IndexController {
      */
     @GetMapping("/index.html")
     public String mainPage(HttpSession session, Model model){
-        //是否登录
-        Object loginUser = session.getAttribute("loginUser");
-        if (loginUser != null){
-            return "index";
-        }else {
-            model.addAttribute("msg","请重新登录");
-            return "login";
-        }
+        //是否登录  经过修改可以通过拦截器实现
+//        Object loginUser = session.getAttribute("loginUser");
+//        if (loginUser != null){
+//            return "index";
+//        }else {
+//            model.addAttribute("msg","请重新登录");
+//            return "login";
+//        }
+        return "index";
     }
 }
