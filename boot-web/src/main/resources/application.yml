@@ -8,3 +8,24 @@ spring:
     hiddenmethod:
       filter:
         enabled: true #开启页面表单的Rest共能
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermes
+    username: root
+    password: w199972w
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: admin
+        reset-enable: false
+
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+
+  jdbc:
+    template:
+      query-timeout: 5

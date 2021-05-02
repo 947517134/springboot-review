@@ -16,6 +16,6 @@ public class AdminWebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")   //所有请求都会被拦截，包括静态资源
-                .excludePathPatterns("/","/login", "/css/**","/fonts/**","/images/**","/js/**"); //放行的请求
+                .excludePathPatterns("/","/login", "/css/**","/fonts/**","/images/**","/js/**","/city"); //放行的请求
     }
 }
